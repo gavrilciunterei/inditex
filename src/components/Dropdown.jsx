@@ -26,7 +26,7 @@ function Dropdown({ outElement, insideElement }) {
   }
 
   return (
-    <div className="relative" ref={wrapperRef}>
+    <div className="relative z-[100]" ref={wrapperRef}>
       <button className=" p-2" onClick={() => setOpenModal(!openModal)}>
         {outElement}
       </button>

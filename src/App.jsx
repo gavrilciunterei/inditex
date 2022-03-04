@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import { useLocation, useRoutes } from 'react-router-dom';
 import Breadcrumb from './components/Breadcrumbs/Breadcrumbs';
 import { routes } from './routes';
+import Container from './components/Container';
 
 function App() {
   const pages = useRoutes(routes);
@@ -14,10 +15,8 @@ function App() {
   return (
     <Provider store={store}>
       <Navbar />
-      <div className="mr-10 ml-10 mt-5">
-        <Breadcrumb routes={routes} currentPath={location.pathname} />
-        {pages}
-      </div>
+      <Breadcrumb routes={routes} currentPath={location.pathname} />
+      <Container>{pages}</Container>
     </Provider>
   );
 }

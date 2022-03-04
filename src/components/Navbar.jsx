@@ -5,7 +5,7 @@ import Translate from './Translate';
 
 function Navbar() {
   return (
-    <nav className="font-sans flex vtext-center flex-row text-left justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
+    <nav className="font-sans flex vtext-center flex-row text-left justify-between py-4 px-6 bg-white shadow items-baseline w-full">
       <div className="mb-2 sm:mb-0">
         <Link
           to="/"
