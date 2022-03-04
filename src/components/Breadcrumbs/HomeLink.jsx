@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import Home from '../../assets/img/Home';
+import { HomeIcon } from '../SvgIcons';
 
 const HomeLink = () => {
   return (
     <Link to="/">
-      <Home />
+      <HomeIcon />
     </Link>
   );
 };

@@ -2,7 +2,7 @@ import { Fragment, useEffect, useState } from 'react';
 import { matchRoutes } from 'react-router-dom';
 import BreadcrumbLink from './BreadcrumbLink';
 import HomeLink from './HomeLink';
-import Arrow from '../../assets/img/Arrow';
+import { ArrowIcon } from '../SvgIcons';
 
 const Breadcrumb = (props) => {
   const { routes, currentPath } = props;
@@ -24,7 +24,7 @@ const Breadcrumb = (props) => {
         const isLast = breadCrumbs.indexOf(crumb) === breadCrumbs.length - 1;
         return (
           <Fragment key={index}>
-            <Arrow />
+            <ArrowIcon />
             <BreadcrumbLink
               params={params}
               path={crumb.path}

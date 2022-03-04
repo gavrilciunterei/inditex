@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from './Dropdown';
+import Cart from './Cart';
+import Translate from './Translate';
 
 function Navbar() {
   return (
@@ -14,8 +15,8 @@ function Navbar() {
         </Link>
       </div>
       <div className="flex justify-center items-center">
-        <h1>Cart </h1>
-        <Dropdown />
+        <Cart />
+        <Translate />
       </div>
     </nav>
   );
