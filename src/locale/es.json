@@ -1,5 +1,7 @@
 {
   "general": {
-    "search": "Buscar"
+    "search": "Buscar",
+    "language_es": "Español",
+    "language_en": "Inglés"
   }
 }

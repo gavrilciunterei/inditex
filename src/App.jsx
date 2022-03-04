@@ -1,17 +1,23 @@
-import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/rootStore';
-import Detail from './views/Detail';
-import Home from './views/Home';
+
 import './locale/index';
+import Navbar from './components/Navbar';
+import { useLocation, useRoutes } from 'react-router-dom';
+import Breadcrumb from './components/Breadcrumbs/Breadcrumbs';
+import { routes } from './routes';
 
 function App() {
+  const pages = useRoutes(routes);
+  const location = useLocation();
+
   return (
     <Provider store={store}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="detail/" element={<Detail />} />
-      </Routes>
+      <Navbar />
+      <div className="mr-10 ml-10 mt-5">
+        <Breadcrumb routes={routes} currentPath={location.pathname} />
+        {pages}
+      </div>
     </Provider>
   );
 }
