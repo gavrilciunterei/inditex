@@ -2,7 +2,11 @@ import { generatePath, Link } from 'react-router-dom';
 
 const BreadcrumbLink = ({ params, showTextOnly, path, text, textOnly }) => {
   const link = generatePath(path, params);
-  return textOnly ? text : <Link to={link}>{text}</Link>;
+  return textOnly ? (
+    <p className={`${textOnly && 'text-blue-500'}`}>{text}</p>
+  ) : (
+    <Link to={link}>{text}</Link>
+  );
 };
 
 export default BreadcrumbLink;
