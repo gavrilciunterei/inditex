@@ -12,7 +12,6 @@ function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
       <div className="flex flex-wrap -m-4  justify-center">
         {allProducts &&
           allProducts.map((prod, index) => {
@@ -22,11 +21,12 @@ function Home() {
                 img={prod.imgUrl}
                 brand={prod.brand}
                 model={prod.model}
+                price={prod.price}
                 id={prod.id}
               />
             );
           })}
-      </div>{' '}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Card({ img, id, model, brand }) {
+function Card({ img, id, model, brand, price }) {
   return (
     <Link to={`/detail/${id}`}>
       <div className="p-4">
@@ -14,9 +14,12 @@ function Card({ img, id, model, brand }) {
             />
           </div>
 
-          <div className="py-5 text-center">
-            <span className="block text-2xl font-bold text-black">{model}</span>
+          <div className="flex flex-col pt-5 text-center">
+            <span className="text-2xl font-bold text-black">{model}</span>
             <span className="text-sm text-black">{brand}</span>
+            <span className=" bg-teal-100 text-teal-700 font-bold">
+              {price.length > 0 ? price + '€' : 'No disponible'}
+            </span>
           </div>
         </div>
       </div>
