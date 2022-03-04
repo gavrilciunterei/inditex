@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import store from './store/rootStore';
 import Detail from './views/Detail';
 import Home from './views/Home';
+import './locale/index';
 
 function App() {
   return (
