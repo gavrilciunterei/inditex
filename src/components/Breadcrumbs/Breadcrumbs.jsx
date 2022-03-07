@@ -18,7 +18,7 @@ const Breadcrumb = (props) => {
   }, [routes, currentPath]);
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center mb-6">
       {breadCrumbs.length > 0 && <HomeLink />}
       {breadCrumbs.map((crumb, index) => {
         const isLast = breadCrumbs.indexOf(crumb) === breadCrumbs.length - 1;

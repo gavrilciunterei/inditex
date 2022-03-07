@@ -1,20 +1,41 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
-import { getAllProducts } from '../store/product/index';
+import { useGetAllProductsQuery } from '../store/product';
+import Search from '../components/Search';
+import { useTranslation } from 'react-i18next';
+
 function Home() {
-  const dispatch = useDispatch();
-  const { allProducts } = useSelector((state) => state.product);
+  const { data, error, isLoading } = useGetAllProductsQuery();
+  const { t } = useTranslation();
+  const [dataFiltred, setDataFiltred] = useState();
 
   useEffect(() => {
-    dispatch(getAllProducts());
-  }, []);
+    if (data) {
+      setDataFiltred(data);
+    }
+  }, [data]);
+
+  const handleOnSearch = (text) => {
+    if (data) {
+      if (text.length > 0) {
+        const filtredData = data.filter(
+          ({ model, brand }) =>
+            model.toLowerCase().includes(text.toLowerCase()) ||
+            brand.toLowerCase().includes(text.toLowerCase())
+        );
+        setDataFiltred(filtredData);
+      } else {
+        setDataFiltred(data);
+      }
+    }
+  };
 
   return (
     <div>
+      <Search action={handleOnSearch} name={t('home.search')} />
       <div className="flex flex-wrap -m-4  justify-center">
-        {allProducts &&
-          allProducts.map((prod, index) => {
+        {dataFiltred &&
+          dataFiltred.map((prod, index) => {
             return (
               <Card
                 key={prod.id}

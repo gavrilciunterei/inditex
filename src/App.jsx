@@ -1,4 +1,5 @@
 import { Provider } from 'react-redux';
+// import { store } from './store/store';
 import store from './store/rootStore';
 
 import './locale/index';
@@ -15,8 +16,10 @@ function App() {
   return (
     <Provider store={store}>
       <Navbar />
-      <Breadcrumb routes={routes} currentPath={location.pathname} />
-      <Container>{pages}</Container>
+      <Container>
+        <Breadcrumb routes={routes} currentPath={location.pathname} />
+        {pages}
+      </Container>
     </Provider>
   );
 }

@@ -1,7 +1,25 @@
 {
   "general": {
-    "search": "Buscar",
     "language_es": "Español",
     "language_en": "Inglés"
+  },
+  "home": {
+    "search": "Buscar"
+  },
+  "detail": {
+    "brand": "Marca",
+    "model": "Modelo",
+    "price": "Precio",
+    "cpu": "CPU",
+    "ram": "RAM",
+    "os": "Sistema Operativo",
+    "displayResolution": "Resolución de pantalla",
+    "battery": "Batería",
+    "primaryCamera": "Cámara Primaria",
+    "secondaryCmera": "Cámara Secundaria",
+    "dimentions": "Dimensiones",
+    "weight": "Peso",
+    "storage": "Almacenamiento",
+    "color": "Color"
   }
 }

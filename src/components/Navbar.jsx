@@ -9,7 +9,7 @@ function Navbar() {
       <div className="mb-2 sm:mb-0">
         <Link
           to="/"
-          className="text-2xl no-underline text-green-900 hover:text-green-700"
+          className="text-2xl no-underline text-teal-700 hover:text-teal-600"
         >
           Logo
         </Link>

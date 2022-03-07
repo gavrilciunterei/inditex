@@ -1,7 +1,25 @@
 {
   "general": {
-    "search": "Search",
     "language_es": "Spanish",
     "language_en": "English"
+  },
+  "home": {
+    "search": "Search"
+  },
+  "detail": {
+    "brand": "Brand",
+    "model": "Model",
+    "price": "Price",
+    "cpu": "CPU",
+    "ram": "RAM",
+    "os": "OS",
+    "displayResolution": "Display Resolution",
+    "battery": "Battery",
+    "primaryCamera": "Primary Camera",
+    "secondaryCmera": "Secondary Camera",
+    "dimentions": "Dimentions",
+    "weight": "Weight",
+    "storage": "Storage",
+    "color": "Color"
   }
 }
