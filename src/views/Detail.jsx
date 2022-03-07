@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useGetByIdQuery, useUpdateCartApiMutation } from '../store/product';
 import { useParams } from 'react-router-dom';
 import MobileDetail from '../components/MobileDetail';
-import Select from 'react-select';
 import SelectInput from '../components/SelectInput';
 import { useTranslation } from 'react-i18next';
 import Button from '../components/Button';
 import { updateCart } from '../store/cart';
 import { useDispatch } from 'react-redux';
+import Spinner from '../components/Spinner';
 
 function Detail() {
   const { id } = useParams();
@@ -24,7 +24,8 @@ function Detail() {
 
   const [isLoadingOptions, setIsLoadingOptions] = useState(true);
 
-  const [updateCartApi, { isLoading: isUpdating }] = useUpdateCartApiMutation();
+  const [updateCartApi, { isLoading: isUpdating, error: isError }] =
+    useUpdateCartApiMutation();
 
   useEffect(() => {
     if (data) {
@@ -67,42 +68,41 @@ function Detail() {
     );
   };
 
-  return (
+  return isLoading ? (
+    <Spinner />
+  ) : error ? (
+    { error }
+  ) : (
     <div className="sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:grid-rows-2 p-3 rounded-lg shadow-lg">
-      {isLoading ? (
-        <h1>Cargandooo!!!!!</h1>
-      ) : (
-        <>
-          <div className="row-span-2 flex justify-center max-h-72">
-            <img src={data?.imgUrl} alt="product" />
-          </div>
-          <div className="">{data && <MobileDetail data={data} />}</div>
-          <div>
-            {!isLoadingOptions && (
-              <>
-                <SelectInput
-                  defaultValue={storage}
-                  onChange={setStorage}
-                  options={storageOptions}
-                  text={t('detail.storage')}
-                />
-
-                <SelectInput
-                  defaultValue={color}
-                  onChange={setColor}
-                  options={colorOptions}
-                  text={t('detail.color')}
-                />
-              </>
-            )}
-            <Button
-              text={'Anadir'}
-              disabled={color && storage ? false : true}
-              handleOnClick={() => handleOnSumbit()}
+      <div className="row-span-2 flex justify-center max-h-72">
+        <img src={data?.imgUrl} alt="product" />
+      </div>
+      <div className="">{data && <MobileDetail data={data} />}</div>
+      <div>
+        {!isLoadingOptions && (
+          <>
+            <SelectInput
+              defaultValue={storage}
+              onChange={setStorage}
+              options={storageOptions}
+              text={t('detail.storage')}
             />
-          </div>
-        </>
-      )}
+
+            <SelectInput
+              defaultValue={color}
+              onChange={setColor}
+              options={colorOptions}
+              text={t('detail.color')}
+            />
+          </>
+        )}
+        <Button
+          text={t('detail.add')}
+          disabled={color && storage && !isUpdating ? false : true}
+          handleOnClick={() => handleOnSumbit()}
+        />
+        <p>{isError}</p>
+      </div>
     </div>
   );
 }

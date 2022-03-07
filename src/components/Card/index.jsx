@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ function Card({ img, id, model, brand, price }) {
             <span className="text-2xl font-bold text-black">{model}</span>
             <span className="text-sm text-black">{brand}</span>
             <span className=" bg-teal-100 text-teal-700 font-bold">
-              {price.length > 0 ? price + '€' : 'No disponible'}
+              {price.length > 0 ? price + '€' : t('home.notAvailable')}
             </span>
           </div>
         </div>

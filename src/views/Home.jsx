@@ -3,7 +3,7 @@ import Card from '../components/Card';
 import { useGetAllProductsQuery } from '../store/product';
 import Search from '../components/Search';
 import { useTranslation } from 'react-i18next';
-
+import Spinner from '../components/Spinner';
 function Home() {
   const { data, error, isLoading } = useGetAllProductsQuery();
   const { t } = useTranslation();
@@ -30,12 +30,16 @@ function Home() {
     }
   };
 
-  return (
+  return isLoading ? (
+    <Spinner />
+  ) : error ? (
+    <h1>{error}</h1>
+  ) : (
     <div>
       <Search action={handleOnSearch} name={t('home.search')} />
       <div className="flex flex-wrap  justify-center">
         {dataFiltred &&
-          dataFiltred.map((prod, index) => {
+          dataFiltred.map((prod) => {
             return (
               <Card
                 key={prod.id}

@@ -4,7 +4,8 @@
     "language_en": "English"
   },
   "home": {
-    "search": "Search"
+    "search": "Search",
+    "notAvailable": "Not Available"
   },
   "detail": {
     "brand": "Brand",
@@ -20,6 +21,7 @@
     "dimentions": "Dimentions",
     "weight": "Weight",
     "storage": "Storage",
-    "color": "Color"
+    "color": "Color",
+    "add": "Add"
   }
 }

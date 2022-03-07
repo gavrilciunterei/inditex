@@ -4,7 +4,8 @@
     "language_en": "Inglés"
   },
   "home": {
-    "search": "Buscar"
+    "search": "Buscar",
+    "notAvailable": "No disponible"
   },
   "detail": {
     "brand": "Marca",
@@ -20,6 +21,7 @@
     "dimentions": "Dimensiones",
     "weight": "Peso",
     "storage": "Almacenamiento",
-    "color": "Color"
+    "color": "Color",
+    "add": "Añadir"
   }
 }
