@@ -1,5 +1,5 @@
 import React from 'react';
-import TextDescription from './TextDescription';
+import TextDescription from '../TextDescription';
 
 function DescriptionItems({ name, text }) {
   return (

@@ -33,7 +33,7 @@ function Home() {
   return (
     <div>
       <Search action={handleOnSearch} name={t('home.search')} />
-      <div className="flex flex-wrap -m-4  justify-center">
+      <div className="flex flex-wrap  justify-center">
         {dataFiltred &&
           dataFiltred.map((prod, index) => {
             return (

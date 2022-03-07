@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Cart from './Cart';
-import Translate from './Translate';
+import Cart from '../Cart';
+import Translate from '../Translate';
 
 function Navbar() {
   return (
@@ -11,7 +11,7 @@ function Navbar() {
           to="/"
           className="text-2xl no-underline text-teal-700 hover:text-teal-600"
         >
-          Logo
+          Store
         </Link>
       </div>
       <div className="flex justify-center items-center">

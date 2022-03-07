@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import DescriptionItems from './DescriptionItems';
+import DescriptionItems from '../DescriptionItems';
 
 function MobileDetail({ data }) {
   const {

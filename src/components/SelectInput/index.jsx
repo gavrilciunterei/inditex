@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import TextDescription from './TextDescription';
+import TextDescription from '../TextDescription';
 
 function SelectInput({ defaultValue, onChange, options, text }) {
   const customStyles = {
