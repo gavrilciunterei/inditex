@@ -18,6 +18,9 @@ La app está envuelta por react router v6 la cual crea 2 rutas, una para la home
   - Con RTK Query se cargan todos los productos de la primera página, los detalles al entrar en cada uno de ellos y se hace la llamada a la api para actualizar la cesta.
   - Se utilizan reducers para almacenar los productos añadidos en la cesta ya que la llamada de la api siempre devuelve el valor de 1 entonces no se observarían cambios.
   - Los productos añadidos se despliegan `(haciendo click en la cesta)` y muestran detalles de cada uno. También se juntan en stacks si añades varias veces el mismo producto. También se ha añadido la posibilidad de eliminar productos de la cesta (solo de estado ya que no había llamada para la api con eso).
+- El cambio de idioma se hizo utilizado el paquete i18next cargando el idioma por defecto la de tu navegador y al elegir otra (desde los 3 puntos de la esquina superior) la guarda en una cookie con el idioma elegido para que no se vuelva a cambiar al entrar a otra página.
+- El buscaor del inicio, busca por la marca y modelo directamente en el array que ya tenemos cargado.
+- Para el estilo se ha utilizado Tailwind Css.
 
 # Organización del proyecto
 
