@@ -7,13 +7,22 @@ function Cart() {
   const { cartProducts } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
+  const getQuantityItems = () => {
+    let total = 0;
+    cartProducts.map((item) => {
+      total += item.quantity;
+    });
+
+    return total;
+  };
+
   return (
     <Dropdown
       outElement={
         <div className="mr-4">
           <div slot="icon" className="relative">
             <div className="absolute text-xs rounded-full -mt-1 -mr-2 px-1 font-bold top-0 right-0 bg-red-700 text-white">
-              {cartProducts.length}
+              {getQuantityItems()}
             </div>
             <CartIcon />
           </div>

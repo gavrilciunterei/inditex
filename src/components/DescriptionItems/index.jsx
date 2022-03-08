@@ -6,7 +6,13 @@ function DescriptionItems({ name, text }) {
     <div>
       <div className="inline-flex">
         <TextDescription text={name} />
-        <p>{typeof text === 'object' ? text.join(', ') : text}</p>
+        <p>
+          {typeof text === 'object'
+            ? text.join(', ')
+            : text.length < 1
+            ? '?'
+            : text}
+        </p>
       </div>
     </div>
   );
