@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Container 1`] = `
+<div
+  className="container lg:px-24 sm:px-10 py-6 mx-auto flex flex-col"
+>
+  <div>
+    <h1>
+      Prueba container
+    </h1>
+  </div>
+</div>
+`;

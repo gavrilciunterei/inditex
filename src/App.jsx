@@ -1,5 +1,4 @@
 import { Provider } from 'react-redux';
-// import { store } from './store/store';
 import store from './store/rootStore';
 
 import './locale/index';
@@ -12,7 +11,6 @@ import Container from './components/Container';
 function App() {
   const pages = useRoutes(routes);
   const location = useLocation();
-
   return (
     <Provider store={store}>
       <Navbar />

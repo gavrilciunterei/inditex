@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test MobileDetail 1`] = `
+<div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Brand
+        :
+      </p>
+      <p>
+        Acer
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Model
+        :
+      </p>
+      <p>
+        Iconia Talk S
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Price
+        :
+      </p>
+      <p>
+        160
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        CPU
+        :
+      </p>
+      <p>
+        Mali-T720MP2
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        RAM
+        :
+      </p>
+      <p>
+        2 GB RAM
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        OS
+        :
+      </p>
+      <p>
+        Android
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Display Resolution
+        :
+      </p>
+      <p>
+        7.0 inches (~69.8% screen-to-body ratio)
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Battery
+        :
+      </p>
+      <p>
+        Non-removable Li-Ion 3400 mAh battery (12.92 Wh)
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Primary Camera
+        :
+      </p>
+      <p>
+        13 MP, autofocus
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Secondary Camera
+        :
+      </p>
+      <p>
+        2 MP, 720p
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Dimentions
+        :
+      </p>
+      <p>
+        191.7 x 101 x 9.4 mm (7.55 x 3.98 x 0.37 in)
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="inline-flex"
+    >
+      <p
+        className="font-bold mr-2"
+      >
+        Weight
+        :
+      </p>
+      <p>
+        260
+      </p>
+    </div>
+  </div>
+</div>
+`;

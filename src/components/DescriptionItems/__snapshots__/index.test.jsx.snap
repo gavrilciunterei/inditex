@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test DescriptionItems 1`] = `
+<div>
+  <div
+    className="inline-flex"
+  >
+    <p
+      className="font-bold mr-2"
+    >
+      Test 
+      :
+    </p>
+    <p>
+      DescriptionItems
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Test DescriptionItems with object 1`] = `
+<div>
+  <div
+    className="inline-flex"
+  >
+    <p
+      className="font-bold mr-2"
+    >
+      Prueba
+      :
+    </p>
+    <p>
+      test, object
+    </p>
+  </div>
+</div>
+`;

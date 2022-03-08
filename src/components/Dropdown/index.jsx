@@ -26,17 +26,19 @@ function Dropdown({ outElement, insideElement }) {
   }
 
   return (
-    <div className="relative z-[100]" ref={wrapperRef}>
-      <button className=" p-2" onClick={() => setOpenModal(!openModal)}>
-        {outElement}
-      </button>
+    <div data-testid="custom-element">
+      <div className="relative z-[100]" ref={wrapperRef}>
+        <button className=" p-2" onClick={() => setOpenModal(!openModal)}>
+          {outElement}
+        </button>
 
-      <div
-        className={`${
-          !openModal && 'hidden'
-        } absolute right-0  py-2 mt-2 bg-gray-100 rounded-md shadow-xl`}
-      >
-        {insideElement}
+        <div
+          className={`${
+            !openModal && 'hidden'
+          } absolute right-0  py-2 mt-2 bg-gray-100 rounded-md shadow-xl`}
+        >
+          {insideElement}
+        </div>
       </div>
     </div>
   );

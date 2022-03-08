@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { useGetByIdQuery, useUpdateCartApiMutation } from '../store/product';
+import {
+  useGetByIdQuery,
+  useUpdateCartApiMutation,
+} from '../../store/rtk/product';
 import { useParams } from 'react-router-dom';
-import MobileDetail from '../components/MobileDetail';
-import SelectInput from '../components/SelectInput';
+import MobileDetail from '../../components/MobileDetail';
+import SelectInput from '../../components/SelectInput';
 import { useTranslation } from 'react-i18next';
-import Button from '../components/Button';
-import { updateCart } from '../store/cart';
+import Button from '../../components/Button';
+import { updateCart } from '../../store/slice/cart';
 import { useDispatch } from 'react-redux';
-import Spinner from '../components/Spinner';
+import Spinner from '../../components/Spinner';
 
 function Detail() {
   const { id } = useParams();
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
-  const { data, error, isLoading } = useGetByIdQuery(id);
+  // Default to use in tests
+  const { data, error, isLoading } = useGetByIdQuery(
+    id ? id : 'P2oqviM96_ozwsgZkj9Xf'
+  );
 
   const [storage, setStorage] = useState();
   const [storageOptions, setStorageOptions] = useState([]);
@@ -46,7 +52,7 @@ function Detail() {
 
   const handleOnSumbit = () => {
     updateCartApi({
-      id: data.id,
+      id: data?.id,
       colorCode: color.code,
       storageCode: storage.code,
     });
@@ -54,15 +60,15 @@ function Detail() {
     // I use it because the last call dont return true info
     dispatch(
       updateCart({
-        id: data.id,
-        img: data.imgUrl,
+        id: data?.id,
+        img: data?.imgUrl,
         colorCode: color.code,
         color: color.name,
         storageCode: storage.code,
         storage: storage.name,
-        model: data.model,
-        brand: data.brand,
-        price: data.price,
+        model: data?.model,
+        brand: data?.brand,
+        price: data?.price,
         quantity: 1,
       })
     );

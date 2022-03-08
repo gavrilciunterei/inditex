@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Card from '../components/Card';
-import { useGetAllProductsQuery } from '../store/product';
-import Search from '../components/Search';
+import Card from '../../components/Card';
+import { useGetAllProductsQuery } from '../../store/rtk/product';
+import Search from '../../components/Search';
 import { useTranslation } from 'react-i18next';
-import Spinner from '../components/Spinner';
+import Spinner from '../../components/Spinner';
 function Home() {
   const { data, error, isLoading } = useGetAllProductsQuery();
   const { t } = useTranslation();

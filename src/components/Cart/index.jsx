@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Dropdown from '../Dropdown';
 import { CartIcon, Delete } from '../SvgIcons';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteItem } from '../../store/cart';
+import { deleteItem } from '../../store/slice/cart';
 function Cart() {
   const { cartProducts } = useSelector((state) => state.cart);
   const dispatch = useDispatch();

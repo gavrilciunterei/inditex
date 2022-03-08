@@ -2,7 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 import TextDescription from '../TextDescription';
 
-function SelectInput({ defaultValue, onChange, options, text }) {
+function SelectInput({ defaultValue, onChange, options, text, inputId }) {
   const customStyles = {
     option: (styles, state) => ({
       ...styles,
@@ -34,6 +34,7 @@ function SelectInput({ defaultValue, onChange, options, text }) {
         onChange={onChange}
         options={options}
         styles={customStyles}
+        inputId={inputId}
       />
     </div>
   );

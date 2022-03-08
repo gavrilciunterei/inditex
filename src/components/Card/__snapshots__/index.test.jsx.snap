@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Card with price 1`] = `
+<a
+  href="/detail/1"
+  onClick={[Function]}
+>
+  <div
+    className="p-4"
+  >
+    <div
+      className="w-72 mx-auto overflow-hidden  rounded-lg shadow-lg bg-white transform hover:scale-105 transition duration-500"
+    >
+      <div
+        className="flex  justify-center"
+      >
+        <img
+          alt="avatar"
+          className="object-cover w-32 h-auto overflow-hidden"
+          src="http://img.com"
+        />
+      </div>
+      <div
+        className="flex flex-col pt-5 text-center"
+      >
+        <span
+          className="text-2xl font-bold text-black"
+        >
+          Predator
+        </span>
+        <span
+          className="text-sm text-black"
+        >
+          Acer
+        </span>
+        <span
+          className=" bg-teal-100 text-teal-700 font-bold"
+        >
+          100€
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`Test Card without price 1`] = `
+<a
+  href="/detail/1"
+  onClick={[Function]}
+>
+  <div
+    className="p-4"
+  >
+    <div
+      className="w-72 mx-auto overflow-hidden  rounded-lg shadow-lg bg-white transform hover:scale-105 transition duration-500"
+    >
+      <div
+        className="flex  justify-center"
+      >
+        <img
+          alt="avatar"
+          className="object-cover w-32 h-auto overflow-hidden"
+          src="http://img.com"
+        />
+      </div>
+      <div
+        className="flex flex-col pt-5 text-center"
+      >
+        <span
+          className="text-2xl font-bold text-black"
+        >
+          Predator
+        </span>
+        <span
+          className="text-sm text-black"
+        >
+          Acer
+        </span>
+        <span
+          className=" bg-teal-100 text-teal-700 font-bold"
+        />
+      </div>
+    </div>
+  </div>
+</a>
+`;
