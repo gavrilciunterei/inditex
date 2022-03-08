@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# ES: Inditex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Instalación y Documentación
 
-## Available Scripts
+## DESARROLLO
 
-In the project directory, you can run:
+En el directorio del proyecto, puede ejecutar:
 
-### `npm start`
+1. Instale el proyecto con `npm install` // `yarn install`
+2. Inicialice la aplicación con `npm run start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Información sobre la app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La app está envuelta por react router v6 la cual crea 2 rutas, una para la home `(/)` y otra para ver los detalles del producto`(/detail/:id)`.
 
-### `npm test`
+- Para la gestión del estado, he decicido utilizar Redux con Redux Toolkit y RTK Query.
+- Se ha decidido utilizar RTK Query porque administra de una forma muy eficiente el cacheo de los datos y tiene la posibilidad de actualizarlos cada hora.
+  - Con RTK Query se cargan todos los productos de la primera página, los detalles al entrar en cada uno de ellos y se hace la llamada a la api para actualizar la cesta.
+  - Se utilizan reducers para almacenar los productos añadidos en la cesta ya que la llamada de la api siempre devuelve el valor de 1 entonces no se observarían cambios.
+  - Los productos añadidos se despliegan `(haciendo click en la cesta)` y muestran detalles de cada uno. También se juntan en stacks si añades varias veces el mismo producto. También se ha añadido la posibilidad de eliminar productos de la cesta (solo de estado ya que no había llamada para la api con eso).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Organización del proyecto
 
-### `npm run build`
+- components: Componentes utilizados en la app y alguno que se ha utilizado varias veces.
+- store: Información de redux y gestión de estados.
+- locale: Configuración de las traducciones.
+- views: Pantallas de la web con sus componentes.
+- utils: Utilidades que se pueden usar en varios sitios de la app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
