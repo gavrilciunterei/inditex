@@ -73,7 +73,7 @@ Array [
     />
   </svg>,
   <svg
-    className="w-6 h-6 text-green-900 hover:text-green-700"
+    className="w-6 h-6 text-teal-700 hover:text-teal-600"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"

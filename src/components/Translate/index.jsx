@@ -17,17 +17,17 @@ function Translate() {
         <>
           <button
             onClick={() => handleChangeLanguage('es')}
-            className="block w-32 px-4 py-2 text-sm text-left text-gray-700 hover:bg-green-900 hover:text-white"
+            className="block w-32 px-4 py-2 text-sm text-left text-gray-700 hover:bg-teal-700 hover:text-white"
             itemID="testeo"
           >
-            🇪🇸{t('general.language_es')}
+            {t('general.language_es')}
           </button>
 
           <button
             onClick={() => handleChangeLanguage('en')}
-            className="block w-32 px-4 py-2 text-sm  text-left text-gray-700 hover:bg-green-900 hover:text-white "
+            className="block w-32 px-4 py-2 text-sm  text-left text-gray-700 hover:bg-teal-700 hover:text-white "
           >
-            🇺🇸{t('general.language_en')}
+            {t('general.language_en')}
           </button>
         </>
       }

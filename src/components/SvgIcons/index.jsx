@@ -46,7 +46,7 @@ export const ArrowIcon = () => (
 export const Dots = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="w-6 h-6 text-green-900 hover:text-green-700"
+    className="w-6 h-6 text-teal-700 hover:text-teal-600"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"

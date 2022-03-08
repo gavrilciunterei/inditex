@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Dropdown from '../Dropdown';
 import { CartIcon, Delete } from '../SvgIcons';
 import { useSelector, useDispatch } from 'react-redux';

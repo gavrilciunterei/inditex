@@ -16,13 +16,13 @@ const newItemAddedState = {
   ],
 };
 
-test('should delete item from storage ', () => {
+test('should delete item from storage', () => {
   expect(reducer(initialStateItem, deleteItem(0))).toEqual({
     ...initialStateEmpty,
   });
 });
 
-test('should add new item to cartProducts ', () => {
+test('should add new item to cartProducts', () => {
   expect(
     reducer(initialStateItem, updateCart({ id: 2, colorCode: 2, storage: 2 }))
   ).toEqual(newItemAddedState);
